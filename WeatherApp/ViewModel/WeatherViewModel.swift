@@ -5,7 +5,7 @@
 //  Created by Jose Vargas on 9/25/24.
 //
 
-import Foundation
+import SwiftUI
 
 final class WeatherViewModel: ObservableObject {
     
@@ -14,9 +14,9 @@ final class WeatherViewModel: ObservableObject {
     @Published var weatherDescription: String?
     @Published var weatherIcon: String = AppConstants.defaultIcon
     
-    private let weatherService: WeatherService
+    private let weatherService: WeatherService!
     
-    public init(weatherService: WeatherService) {
+    init(weatherService: WeatherService = WeatherService()) {
         self.weatherService = weatherService
     }
     

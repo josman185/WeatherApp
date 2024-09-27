@@ -8,7 +8,7 @@
 import Foundation
 import CoreLocation
 
-public final class WeatherService: NSObject {
+final class WeatherService: NSObject {
     
     private let locationManager = CLLocationManager()
     
@@ -28,7 +28,7 @@ public final class WeatherService: NSObject {
     private func makeDataRequest(forCoordinates coordinates: CLLocationCoordinate2D) {
         guard let urlString = "https://api.openweathermap.org/data/2.5/weather?lat=\(coordinates.latitude)&lon=\(coordinates.longitude)&appid=\(AppConstants.API_KEY)&units=metric".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
         guard let url = URL(string: urlString) else { return }
-        
+        print("URL:\(url)")
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard error == nil, let data = data else { return }
             if let response = try? JSONDecoder().decode(APIResponse.self, from: data) {
@@ -47,4 +47,11 @@ extension WeatherService: CLLocationManagerDelegate {
     public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Error: \(error.localizedDescription)")
     }
+}
+
+enum APIError: Error {
+    case invalidURL
+    case invalidResponse
+    case invalidData
+    case unableToComplete
 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E50EBA7D2CA5C51700D8310E /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50EBA7C2CA5C51700D8310E /* TabBarView.swift */; };
+		E50EBA7F2CA5C53400D8310E /* SearchCityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50EBA7E2CA5C53400D8310E /* SearchCityView.swift */; };
+		E50EBA812CA5E22100D8310E /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50EBA802CA5E22100D8310E /* CityCell.swift */; };
 		E519B8242CA4DB2900B0C72D /* WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E519B8232CA4DB2900B0C72D /* WeatherApp.swift */; };
 		E519B8262CA4DB2900B0C72D /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E519B8252CA4DB2900B0C72D /* WeatherView.swift */; };
 		E519B8282CA4DB2C00B0C72D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E519B8272CA4DB2C00B0C72D /* Assets.xcassets */; };
@@ -18,6 +21,8 @@
 		E519B8552CA4E5F200B0C72D /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E519B8542CA4E5F200B0C72D /* WeatherService.swift */; };
 		E519B8582CA4E66400B0C72D /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E519B8572CA4E66400B0C72D /* AppConstants.swift */; };
 		E519B85E2CA4F94800B0C72D /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E519B85D2CA4F94800B0C72D /* WeatherViewModel.swift */; };
+		E5F413822CA6428000CC7FD2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F413812CA6428000CC7FD2 /* NetworkManager.swift */; };
+		E5F413842CA6435A00CC7FD2 /* SearchCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F413832CA6435A00CC7FD2 /* SearchCityViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E50EBA7C2CA5C51700D8310E /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		E50EBA7E2CA5C53400D8310E /* SearchCityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityView.swift; sourceTree = "<group>"; };
+		E50EBA802CA5E22100D8310E /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 		E519B8202CA4DB2900B0C72D /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E519B8232CA4DB2900B0C72D /* WeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApp.swift; sourceTree = "<group>"; };
 		E519B8252CA4DB2900B0C72D /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
@@ -52,6 +60,8 @@
 		E519B8542CA4E5F200B0C72D /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		E519B8572CA4E66400B0C72D /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		E519B85D2CA4F94800B0C72D /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		E5F413812CA6428000CC7FD2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E5F413832CA6435A00CC7FD2 /* SearchCityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +161,10 @@
 		E519B84E2CA4E33500B0C72D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E50EBA7C2CA5C51700D8310E /* TabBarView.swift */,
 				E519B8252CA4DB2900B0C72D /* WeatherView.swift */,
+				E50EBA7E2CA5C53400D8310E /* SearchCityView.swift */,
+				E50EBA802CA5E22100D8310E /* CityCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -160,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				E519B85D2CA4F94800B0C72D /* WeatherViewModel.swift */,
+				E5F413832CA6435A00CC7FD2 /* SearchCityViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -167,6 +181,7 @@
 		E519B8502CA4E34500B0C72D /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				E5F413812CA6428000CC7FD2 /* NetworkManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -319,8 +334,13 @@
 			files = (
 				E519B8552CA4E5F200B0C72D /* WeatherService.swift in Sources */,
 				E519B8262CA4DB2900B0C72D /* WeatherView.swift in Sources */,
+				E5F413822CA6428000CC7FD2 /* NetworkManager.swift in Sources */,
+				E50EBA7D2CA5C51700D8310E /* TabBarView.swift in Sources */,
 				E519B8522CA4E39400B0C72D /* Weather.swift in Sources */,
+				E50EBA7F2CA5C53400D8310E /* SearchCityView.swift in Sources */,
+				E50EBA812CA5E22100D8310E /* CityCell.swift in Sources */,
 				E519B8242CA4DB2900B0C72D /* WeatherApp.swift in Sources */,
+				E5F413842CA6435A00CC7FD2 /* SearchCityViewModel.swift in Sources */,
 				E519B8582CA4E66400B0C72D /* AppConstants.swift in Sources */,
 				E519B85E2CA4F94800B0C72D /* WeatherViewModel.swift in Sources */,
 			);
@@ -489,6 +509,8 @@
 				DEVELOPMENT_TEAM = NHW96578YG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WeatherApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = NO;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location is required to provide accuracy weather data.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -519,6 +541,8 @@
 				DEVELOPMENT_TEAM = NHW96578YG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WeatherApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = NO;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location is required to provide accuracy weather data.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

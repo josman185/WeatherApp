@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Weather Object
 public struct Weather {
     let city: String
     let temperature: String
@@ -21,6 +22,7 @@ public struct Weather {
     }
 }
 
+// Response
 struct APIResponse: Decodable {
     let name: String
     let main: Main
@@ -38,5 +40,23 @@ struct APIWeather: Decodable {
     enum CodingKeys: String, CodingKey {
         case description
         case icon = "main"
+    }
+}
+
+// City Object
+struct APICity: Decodable, Identifiable {
+    let id = UUID()
+    let name: String
+    let lat: Float
+    let lon: Float
+    let country: String
+    let state: String
+    
+    enum CodingKeys: String, CodingKey {
+        case name
+        case lat
+        case lon
+        case country
+        case state
     }
 }

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct WeatherView: View {
     
-    @ObservedObject var viewModel: WeatherViewModel
+    @StateObject private var viewModel = WeatherViewModel()
+    @State private var city = ""
     
     var body: some View {
         VStack {
@@ -30,5 +31,5 @@ struct WeatherView: View {
 }
 
 #Preview {
-    WeatherView(viewModel: WeatherViewModel(weatherService: WeatherService()))
+    WeatherView()
 }
